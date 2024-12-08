@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "processing"
+version = "0.1.0"
+description = ""
+authors = ["Francesco Ventura <francescoventura.183464@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11.10"
+transformers = "^4.45.2"
+redis = "^5.1.1"
+confluent-kafka = "^2.6.0"
+httpx = "^0.28.0"
+minio = "^7.2.12"
+structlog = "^24.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
