@@ -38,6 +38,7 @@ services:
     hostname: "api"
     depends_on:
       - postgres
+    restart: always
 
   ingestion:
     build: ./ingestion
@@ -45,12 +46,14 @@ services:
       - "8080:8080"
     depends_on:
       - kafka
+    restart: always
 
   processing:
     build: ./processing
     depends_on:
       - kafka
       - redis
+    restart: always
 
   minio:
     image: minio/minio:latest
